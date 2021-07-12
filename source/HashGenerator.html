@@ -1,0 +1,61 @@
+<!-- coded by alireza -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hash Generator</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="content/images/favicon.png">
+    <link rel="stylesheet" href="engine/styles/style.css">
+    <link rel="stylesheet" href="engine/styles/Background.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="engine/animate/animate.css">
+</head>
+
+<body>
+    <div class="alert-container">
+        <span style="margin-right: 20px;" id="alertText">--</span>
+        <img src="content/images/close.svg" alt="close-icon" class="alert-close">
+    </div>
+
+    <div class="up-container pt-5 px-3 col-12">
+        <p class="up-title wow fadeInDownBig">
+            <code><span class="text-danger">H</span><span class="text-white" style="font-family: var(--uptitle-font);">ash</span><span class="text-danger">G</span><span class="text-white" style="font-family: var(--uptitle-font);">enerator</span></code>
+        </p>
+        <div class="col-11 col-sm-9 col-md-7 col-xl-6 col-xxl-5">
+            <input type="text" id="inputText" class="form-control wow fadeIn" placeholder="Text" maxlength="30" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="col-11 col-sm-9 col-md-7 col-xl-6 col-xxl-5 buttons-container pt-4">
+            <div class="dropdown">
+                <button type="button" id="hashTypes" class="btn btn-outline-success dropdown-toggle m-1 wow fadeInLeftBig" data-bs-toggle="dropdown" data-bs-offset="0,10">MD5  </button>
+                <button type="button" id="generateBtn" class="btn btn-outline-success m-1 wow fadeInRightBig">Generate</button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li onclick="changeType('MD5')"><a class="dropdown-item">MD5</a></li>
+                    <li onclick="changeType('SHA-1')"><a class="dropdown-item">SHA-1</a></li>
+                    <li onclick="changeType('SHA-512')"><a class="dropdown-item">SHA-512</a></li>
+                    <li onclick="changeType('SHA-256')"><a class="dropdown-item">SHA-256</a></li>
+                    <li onclick="changeType('RIPEMD-160')"><a class="dropdown-item">RIPEMD-160</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="down-conatiner col-12">
+        <div class="hash-container col-12 col-sm-10 col-lg-7 col-xl-auto">
+            <p id="hash" class="col-auto"></p>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="engine/source/autoType.js"></script>
+<script src="engine/source/script.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+</html>

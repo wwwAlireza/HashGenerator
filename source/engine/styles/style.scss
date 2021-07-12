@@ -1,0 +1,124 @@
+// Coded By alireza @myFrontCodes
+// imports / variable / body
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+:root {
+    --uptitle-fs: 4rem;
+    --uptitle-font: 'Fira Code', monospace;
+    --hash-fs: 2rem;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+@mixin flex($justify:center,
+$align:center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// styles
+.up-container {
+    @include flex(flex-start,
+    center);
+    flex-direction: column;
+}
+
+.up-title {
+    font-size: var(--uptitle-fs);
+}
+
+.buttons-container {
+    @include flex(center,
+    flex-start)
+}
+
+#inputText {
+    outline: none;
+    border: 0;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    background-color: rgba($color: #000000, $alpha: .25);
+    color: rgba($color: #ffffff, $alpha: .7);
+}
+
+.btn {
+    opacity: .89;
+}
+
+.down-conatiner {
+    padding: 100px 20px;
+    @include flex(center,
+    flex-start);
+    #hash {
+        color: rgba($color: #ffffff, $alpha: .8);
+        font-size: var(--hash-fs);
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
+
+.hash-container {
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    padding: 30px;
+    @include flex();
+    overflow-x: auto;
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+.alert-container {
+    width: 300px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    font-size: .8rem;
+    border-radius: 5px;
+    .alert-close {
+        width: 1rem;
+        &:hover {
+            opacity: .8;
+            cursor: pointer;
+        }
+    }
+    visibility: hidden;
+}
+
+.alertSuccess {
+    color: rgba(25, 135, 84, 1);
+    border: 1px solid rgba(25, 135, 84, 1);
+    background-color: rgba(25, 135, 84, .1);
+}
+
+.alertDanger {
+    color: #ff7b72;
+    background-image: linear-gradient(rgba(248, 81, 73, 0.1));
+    border: 1px solid rgba(248, 81, 73, 0.4);
+}
+
+// responsive
+@media screen and (max-width: 700px) {
+     :root {
+        --uptitle-fs: 3rem;
+        --hash-fs: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+     :root {
+        --uptitle-fs: 2.3rem;
+        --hash-fs: 1.2rem;
+    }
+}
+
+#hash {
+    max-width: 90vw;
+}

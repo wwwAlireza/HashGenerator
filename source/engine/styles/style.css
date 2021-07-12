@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap");
+:root {
+  --uptitle-fs: 4rem;
+  --uptitle-font: 'Fira Code', monospace;
+  --hash-fs: 2rem;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.up-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.up-title {
+  font-size: var(--uptitle-fs);
+}
+
+.buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#inputText {
+  outline: none;
+  border: 0;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.btn {
+  opacity: .89;
+}
+
+.down-conatiner {
+  padding: 100px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.down-conatiner #hash {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--hash-fs);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.hash-container {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: auto;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.alert-container {
+  width: 300px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  font-size: .8rem;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.alert-container .alert-close {
+  width: 1rem;
+}
+
+.alert-container .alert-close:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.alertSuccess {
+  color: #198754;
+  border: 1px solid #198754;
+  background-color: rgba(25, 135, 84, 0.1);
+}
+
+.alertDanger {
+  color: #ff7b72;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(248, 81, 73, 0.1)));
+  background-image: linear-gradient(rgba(248, 81, 73, 0.1));
+  border: 1px solid rgba(248, 81, 73, 0.4);
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+    --uptitle-fs: 3rem;
+    --hash-fs: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --uptitle-fs: 2.3rem;
+    --hash-fs: 1.2rem;
+  }
+}
+
+#hash {
+  max-width: 90vw;
+}
+/*# sourceMappingURL=style.css.map */
